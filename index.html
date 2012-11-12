@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset=utf-8 />
+		<link rel="stylesheet" href="leaflet/dist/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="tb/css/bootstrap.css">
+		<!--[if lte IE 8]>
+		    <link rel="stylesheet" href="leaflet/dist/leaflet.ie.css" />
+		<![endif]-->		
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
+		<link rel="stylesheet" href="js/jquery.ptTimeSelect.css" />
+		
+	</head>   
+  	<body>
+		<div class='header'>Formulario para el Registro de Incidentes Delictivos <a>Descarge Los Datos Registrados</a></div>
+		
+		<div id="contentform">
+			<div id="formulario">
+				<script type="text/javascript">
+					var submitted=false;
+				</script>
+				<iframe name="hidden_iframe" id="hidden_iframe"
+				style="display:none;" onload="if(submitted)
+				{window.location='confirm.html';
+				}">
+				</iframe>
+				<form method="post"
+				target="hidden_iframe"  onsubmit="submitted=Valida(this);" class="well span6" id="ss-form" >
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-select">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_0">Incidente
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_0">
+								</label>
+								<select name="entry.0.single" id="entry_0" style="width:400px">
+									<option value="Robo">Robo</option> 
+									<option value="Intento de Robo">Intento de Robo</option>
+									<option value="Agresión">Agresión</option> 
+									<option value="Accidente">Accidente</option> 
+									<option value="Violencia Familiar">Violencia Familiar</option>
+									<option value="Otros">Otros</option>
+								</select>
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_1">Fecha del Incidente
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_1">
+								</label>
+								<input type="text" name="entry.1.single" value="" class="ss-q-short" id="entry_1" style="width:400px" >
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_2">Hora del Incidente
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_2">
+								</label>
+									<input type="text" name="entry.2.single" value="" class="ss-q-short" id="entry_2" style="width:400px">
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item  ss-paragraph-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_3">Dirección - Referencia
+								</label>
+								<label class="ss-q-help" for="entry_3">
+								</label>
+								<textarea name="entry.3.single" rows="8" cols="75"  id="entry_3" style="width:400px; height: 60px;"></textarea>
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-paragraph-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_4">Descripción del Incidente
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_4">
+								</label>
+								<textarea name="entry.4.single" rows="8" cols="75" class="ss-q-long" id="entry_4" style="width:400px"></textarea>
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_5">Latitud
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_5">
+								</label>
+								<input type="text" name="entry.5.single" value="" class="ss-q-short" id="entry_5" placeholder="click en el Mapa" style="width:400px">
+							</div>
+						</div>
+					</div>
+					<br> 
+					<div class="errorbox-good">
+						<div class="ss-item ss-item-required ss-text">
+							<div class="ss-form-entry">
+								<label class="ss-q-title" for="entry_6">Longitud
+									<span class="ss-required-asterisk">*</span>
+								</label>
+								<label class="ss-q-help" for="entry_6">
+								</label>
+								<input type="text" name="entry.6.single" value="" class="ss-q-short" id="entry_6" placeholder="click en el Mapa" style="width:400px">
+							</div>
+						</div>
+					</div>
+					<div id="lastfield">
+						<br> 
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_7">tipo-fecha-dia
+									</label>
+									<label class="ss-q-help" for="entry_7">
+									</label>
+									<input type="text" name="entry.7.single" value="" class="ss-q-short" id="entry_7">
+								</div>
+							</div>
+						</div>
+						<br> 
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_8">tipo-fecha-mes
+									</label>
+									<label class="ss-q-help" for="entry_8">
+									</label>
+									<input type="text" name="entry.8.single" value="" class="ss-q-short" id="entry_8">
+								</div>
+							</div>
+						</div>
+						<br> 
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_9">tipo-fecha-año</label>
+									<label class="ss-q-help" for="entry_9"></label>
+									<input type="text" name="entry.9.single" value="" class="ss-q-short" id="entry_9">
+								</div>
+							</div>
+						</div>
+						<br> 
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_10">dia</label>
+									<label class="ss-q-help" for="entry_10"></label>
+									<input type="text" name="entry.10.single" value="" class="ss-q-short" id="entry_10">
+								</div>
+							</div>
+						</div>
+						<br> 
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_11">mes</label>
+									<label class="ss-q-help" for="entry_11"></label>
+									<input type="text" name="entry.11.single" value="" class="ss-q-short" id="entry_11">
+								</div>
+							</div>
+						</div>
+						<br>
+						<div class="errorbox-good">
+							<div class="ss-item  ss-text">
+								<div class="ss-form-entry">
+									<label class="ss-q-title" for="entry_12">anio</label>
+									<label class="ss-q-help" for="entry_12"></label>
+									<input type="text" name="entry.12.single" value="" class="ss-q-short" id="entry_12">
+								</div>
+							</div>
+						</div>
+					</div>
+					<br>
+					<input type="hidden" name="pageNumber" value="0">
+					<input type="hidden" name="backupCache" value="">
+					<div class="ss-item ss-navigate">
+						<div class="ss-form-entry">
+							<input type="submit" name="submit" value="Enviar" style="width:200px">
+						</div>
+					</div>
+				</form>
+			</div>
+
+			<script type="text/javascript">
+			      
+			(function() {
+				var divs = document.getElementById('ss-form').
+				getElementsByTagName('div');
+				var numDivs = divs.length;
+				for (var j = 0; j < numDivs; j++) {
+					if (divs[j].className == 'errorbox-bad') {
+						divs[j].lastChild.firstChild.lastChild.focus();
+						return;
+					}
+				}
+				
+				for (var i = 0; i < numDivs; i++) {
+					var div = divs[i];
+					if (div.className == 'ss-form-entry' &&
+					div.firstChild && div.firstChild.className == 'ss-q-title') {
+						div.lastChild.focus();
+						return;
+					}
+				}
+			})();
+			      </script>
+		
+		  <!--mapa-->
+			<div id="map"></div>
+			<div class="left">
+				<a id="geojsonLayer"   href="#" ></a>
+			</div>
+
+		</div>
+	  <!--Scripts-->		
+ 		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
+    	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+		<script src="js/jquery.ptTimeSelect.js"></script>
+		<script src="js/jquery.validate.js"></script>
+ 		<script type="text/javascript" src="tb/js/bootstrap.js"></script>
+		<script src="leaflet/dist/leaflet.js"></script>
+		<script type="text/javascript" src="app.js"></script>
+		<script type="text/javascript" src="form.js"></script>
+		</body>
+</html>
