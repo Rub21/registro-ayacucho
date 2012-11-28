@@ -2,10 +2,10 @@
 <html>
 	<head>
 		<meta charset=utf-8 />
-		<link rel="stylesheet" href="leaflet/dist/leaflet.css" />
-		<link rel="stylesheet" type="text/css" href="tb/css/bootstrap.css">
+		<link rel="stylesheet" href="css/leaflet.css" />
+		<link rel="stylesheet" type="text/css" href="js/tb/css/bootstrap.css">
 		<!--[if lte IE 8]>
-		    <link rel="stylesheet" href="leaflet/dist/leaflet.ie.css" />
+		    <link rel="stylesheet" href="css/leaflet.ie.css" />
 		<![endif]-->		
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
@@ -13,10 +13,10 @@
 		
 	</head>   
   	<body>
-		<div class='header'>Formulario para el Registro de Incidentes Delictivos <a>Descarge Los Datos Registrados</a></div>
+		<div class='header'>Formulario para el Registro de Incidentes Delictivos</div>
 		
 		<div id="contentform">
-			<div id="formulario">
+			<div id="form">
 				<script type="text/javascript">
 					var submitted=false;
 				</script>
@@ -123,6 +123,8 @@
 							</div>
 						</div>
 					</div>
+
+					<!--Not display these fields below-->
 					<div id="lastfield">
 						<br> 
 						<div class="errorbox-good">
@@ -200,8 +202,17 @@
 				</form>
 			</div>
 
-			<script type="text/javascript">
-			      
+		    <!--mapa-->
+			<div id="map"></div>
+
+			<div class="left">
+				<a id="geojsonLayer"   href="#" ></a>
+			</div>		
+
+		</div>
+		
+		<script type="text/javascript">			      
+			 //script of form  from google
 			(function() {
 				var divs = document.getElementById('ss-form').
 				getElementsByTagName('div');
@@ -222,23 +233,18 @@
 					}
 				}
 			})();
-			      </script>
-		
-		  <!--mapa-->
-			<div id="map"></div>
-			<div class="left">
-				<a id="geojsonLayer"   href="#" ></a>
-			</div>
+			
+		</script>
 
-		</div>
-	  <!--Scripts-->		
+	    <!--Scripts-->		
  		<script src="http://code.jquery.com/jquery-1.8.2.js"></script>
     	<script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
 		<script src="js/jquery.ptTimeSelect.js"></script>
 		<script src="js/jquery.validate.js"></script>
- 		<script type="text/javascript" src="tb/js/bootstrap.js"></script>
-		<script src="leaflet/dist/leaflet.js"></script>
-		<script type="text/javascript" src="app.js"></script>
-		<script type="text/javascript" src="form.js"></script>
-		</body>
+ 		<script type="text/javascript" src="js/tb/js/bootstrap.js"></script>
+		<script src="js/leaflet.js"></script>
+		<script type="text/javascript" src="js/app.js"></script>
+		<script type="text/javascript" src="js/form.js"></script>
+	</body>
+
 </html>
