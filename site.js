@@ -7,6 +7,7 @@ $(function () {
         _clickTimeout = false,
         init = true;
 
+    m.ui.attribution.add().content('<a href="http://mapbox.com/about/maps">Terms &amp; Feedback</a>');
     m.ui.zoomer.add();
     m.centerzoom({
         lat: -13.16048,
