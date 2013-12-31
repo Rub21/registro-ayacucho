@@ -24,7 +24,7 @@ $(function(){
 
     //Add href and disable some fields
     //$('.header a').attr('href','https://docs.google.com/spreadsheet/pub?key=0AhfXukqwpMbidDdTU3M0dE5raElpb3M2Y09ZaEJVSmc&output=xls');
-    $('form').attr('action','https://docs.google.com/a/developmentseed.org/spreadsheet/formResponse?formkey=dDdTU3M0dE5raElpb3M2Y09ZaEJVSmc6MA&amp;ifq');
+    $('form').attr('action','https://docs.google.com/spreadsheet/formResponse?formkey=dGV1TTk4WGNXY1p5ckc2ZmhxNGstM3c6MA&amp;ifq');
     $("#entry_1").attr('readonly',  'readonly');
     $("#entry_2").attr('readonly',  'readonly');
     $("#entry_5").attr('readonly',  'readonly');

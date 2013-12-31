@@ -1,5 +1,5 @@
 $(function () {
-    var m = mapbox.map('map', mapbox.layer().id('examples.map-4l7djmvo')),
+    var m = mapbox.map('map', mapbox.layer().id('ruben.gmkbh9l9')),
         point,
         _d, // Down Event
         tol = 4, // Touch Tolerance
