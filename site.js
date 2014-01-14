@@ -46,9 +46,6 @@ $(function () {
         if (killTimeout()) {
             return;
         }
-
-        // Prevent interaction offset calculations happening while the user is dragging the map.
-        // Store this event so that we can compare it to the up event
         _downLock = true;
         _d = new MM.Point(e.clientX, e.clientY);
 
